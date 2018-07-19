@@ -1,0 +1,57 @@
+@import url(home.css);
+main{
+    background-image: url(../img/fondo1.jpg);
+}
+h2{
+    color: black;
+    text-align: center;
+    font-size: 200%;
+    margin-bottom: 20px;
+}
+
+.formulario{
+    background-color: #1a89ac;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 130%;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 50%;
+    display: block;
+}
+
+input{
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 50%;
+    padding: 3px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: none;
+}
+
+#boton{
+    background: #31384A;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#boton:hover{
+    cursor: pointer;
+}
+
+#boton:active{
+    transform: scale(0.90);
+}
+

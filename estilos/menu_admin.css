@@ -1,0 +1,23 @@
+main{
+    background-image: url(../img/fondo1.jpg);
+}
+
+.catalogo a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background-color: #0b85ac;
+    border-radius: 10px;
+}
+
+.catalogo a:hover{
+    background-color: white;
+    color: #0b85ac;
+}
+
+.catalogo li{
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px;
+    list-style: none;
+}

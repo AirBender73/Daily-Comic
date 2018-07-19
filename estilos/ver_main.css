@@ -1,0 +1,89 @@
+.comics{
+    background-image: url(../img/fondonoticias1.jpg);
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.comics article{
+    background-image: url(../img/fondonoticias.jpg);
+    background-size: 1000px;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: antiquewhite;
+    border-style: solid;
+    border-width: 2px;
+    overflow: hidden;
+}
+
+    .comics article figure{
+        width: 40%;
+        display: inline-block;
+        float: left;
+    }
+
+        .comics article figure a img{
+                width: 230px;
+                display: inline-block;
+                margin: 10px;
+            }
+
+.comics article .texto{
+    width: 58%;
+    margin-top: 8px;
+    display: inline-block;
+    border-color: #be2534;
+    border-style: solid;
+    border-width: 2px;
+    height: 360px;
+    float: left;
+}
+
+.comics article h3{
+    text-align: center;
+    color: bisque;
+    margin-bottom: 15px;
+}
+
+.comics article .texto p{
+    color: azure;
+    font-size: 20px
+}
+
+.comics .opciones{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.comics .opciones ul{
+    width: 99.5%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-color: #0b85ac;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.comics .opciones ul li{
+    width: 19.5%;
+    display: inline-block;
+    text-align: center;
+}
+
+.comics .opciones ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    display: block;
+}
+
+.comics .opciones ul li:hover{
+    background-color: rgba(255,255,255,10);
+}
+
+.comics .opciones ul li a:hover{
+    color: black;
+}

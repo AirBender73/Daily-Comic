@@ -1,0 +1,84 @@
+footer{
+    height: 30%;
+}
+
+footer div{
+    margin-bottom: 2%;
+}
+
+footer .comentario{
+    display: inline-block;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+footer .comentario div{
+    float: left;
+}
+
+footer .comentario h3{
+    display: inline-block;
+    color: bisque;
+    float: left;
+}
+
+footer .comentario textarea{
+    width: 250px;
+    height: 80px;
+    margin-left: 30px;
+    float: left;
+}
+
+footer .comentario li{
+    height: 35px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+footer .comentario li a{
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+footer .comentario li:hover{
+    background-color: rgba(255,255,255,10);
+}
+
+footer .comentario li a:hover{
+    color: black;
+}
+
+
+
+footer .sociales{
+    float: right;
+    display: inline-block;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+footer .sociales h3{
+    display: inline-block;
+    color: bisque;
+    margin-right: 100px;
+}
+
+footer ul{
+    margin-top: 20px;
+    list-style: none;
+}
+
+footer ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+footer ul li a{
+    font-size: 30px;
+    text-decoration: none;
+    color: antiquewhite;
+}

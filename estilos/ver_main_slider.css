@@ -1,0 +1,42 @@
+.slider2{
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider2 ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    margin: 25px 0px;
+    height: 350px;
+    animation: cambio 15s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes cambio{
+    0% { margin-left: 0;}
+    30% {margin-left: 0;}
+    
+    35% {margin-left: -100%}
+    65% {margin-left: -100%}
+    
+    70% {margin-left: -200%}
+    100% {margin-left: -200%}
+}
+
+.slider2 ul li{
+    width: 100%;
+    list-style: none;
+}
+
+
+.slider2 ul li img{
+    border-width: 2px;;
+    border-color: #0b85ac;
+    border-style: solid;
+    padding: 0;
+    width: 98%;
+    height: 350px;
+}
