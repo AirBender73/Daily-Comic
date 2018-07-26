@@ -1,6 +1,6 @@
 <?
 
-include 'conexion.php'
+include 'conexion.php';
 
 ?>
 
@@ -11,7 +11,7 @@ include 'conexion.php'
   <title>Daily-Comic</title>
   <link rel="stylesheet" href="..\estilos\home.css">
  </head>
- <body>
+ <body onload="">
   <header>
    <? include 'header.php'?>
   </header>
@@ -26,7 +26,8 @@ include 'conexion.php'
    ?>
     <div class="slider">
         <ul>
-            <? do{ ?> <li><img src="<? echo $not['archivo'];?>"></li> <?} while($not=mysqli_fetch_assoc($noticias))?>
+            <? do{ ?> <li><img src="<? echo $not['archivo'];?>"></li>
+            <?} while($not=mysqli_fetch_assoc($noticias))?>
         </ul>
     </div>
    </aside>
@@ -57,11 +58,11 @@ include 'conexion.php'
      </div>
      <div class="opciones">
       <ul>
-       <li><a href="#"><span class="icon-eye"></span>Ver</a></
-       <li><a href="#"><span class="icon-download"></spanargar</a></li>
+          <li><a href="#"><span class="icon-eye"></span>Ver</a></li>
+          <li><a href="#"><span class="icon-download"></span>Descargar</a></li>
        <li><a href="#"><span class="icon-star-full"></span>Favoritos</a></li>
        <li><a href="#"><span class="icon-grin2"></span>Me gusta</a></li>
-       <li><a href="#"><span class="icon-frustrated2"></span>Nusta</a></li>
+       <li><a href="#"><span class="icon-frustrated2"></span>No me gusta</a></li>
       </ul>
      </div>
     </article>

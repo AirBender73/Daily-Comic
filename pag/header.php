@@ -1,6 +1,5 @@
 <? include'conexion.php'; 
-
-	
+session_start();
 $consulta_categoria = "select * from productos";
 $categoria = mysqli_query($conexion,$consulta_categoria);
 $not=mysqli_fetch_array($categoria);
@@ -41,10 +40,19 @@ $not=mysqli_fetch_array($categoria);
 					</ul>
 				</li>
 				<li class="submenu3"><a class="icon-users"></a>
+					<?php if(empty($_SESSION['username'])){?>
 					<ul>
 						<li><a href="crearcuenta.php" class="icon-user-plus">Crear Cuenta</a></li>
 						<li><a href="login.php" class="icon-user">Iniciar Sesión</a></li>
 					</ul>
+					<?php } else { ?>
+					    <ul>
+					        <li>
+					            <i class="icon-user-plus"></i> <p> <?php echo $_SESSION['username']; ?></p>
+					        </li>
+					        <li><a href="cerrarSesion.php">cerrar sesión</a></li>
+					    </ul>
+					<?php } ?>
 				</li>
 			</ul>
 		</nav>

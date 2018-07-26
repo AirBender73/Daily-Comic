@@ -28,7 +28,7 @@ label{
     display: block;
 }
 
-input{
+input,#boton{
     border-radius: 8px;
     display: block;
     margin: auto;
@@ -37,7 +37,7 @@ input{
     padding: 3px;
     box-sizing: border-box;
     font-size: 15px;
-    border: none;
+    
 }
 
 #boton{
@@ -53,5 +53,28 @@ input{
 
 #boton:active{
     transform: scale(0.90);
+}
+
+.invalido{
+    border:2px solid red !important;
+}
+.valido{
+    border:2px solid green !important;
+}
+
+.disabled{
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}
+
+.error{
+    text-align: center;
+    color: red;
+    margin-bottom: 1rem;
+    display: block
+}
+
+.displayNone{
+    display: none;
 }
 

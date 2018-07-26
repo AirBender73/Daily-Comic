@@ -1,0 +1,8 @@
+Buscador
+Registrar usuario  (Base de datos)
+Ver comic propiedades
+ver comic en realidad
+comentarios en comic
+comantarios en general
+like,favoritos
+proceso de compra

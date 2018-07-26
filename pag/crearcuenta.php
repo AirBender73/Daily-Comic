@@ -1,6 +1,15 @@
-<?
+<?php
+
 
 include 'conexion.php';
+
+if(isset($_REQUEST['registrar'])){
+    echo "<script> alert('si entre we');</script>";
+}
+
+
+
+/*
 if(isset($_REQUEST['correo']) && !isset($_REQUEST['id']))
 {
 
@@ -76,7 +85,7 @@ if (is_uploaded_file($_FILES['archivo']['tmp_name']))
 }
 }
 
-
+*/
 ?>
 
 <!DOCTYPE html>
@@ -86,72 +95,57 @@ if (is_uploaded_file($_FILES['archivo']['tmp_name']))
   <meta charset="UTF-8">
   <title>Daily-comic</title>
   <link rel="stylesheet" href="../estilos/crearcuenta.css">
+  
  </head>
+<style>
 
+</style>
  <body>
+ 
   <header>
    <? include 'header.php'?>
   </header>
   <main class="main">
    <article>
     <div class="formulario">
-     <form action="crearcuenta.php" method="post" enctype="multipart/form-data">
+     <form action="crearcuenta.php" enctype="multipart/form-data" id="formulario" method="post">
 
 
       <h2>Crear Cuenta</h2>
 
       <label>Nombre de usuario</label>
-      <input type="text" name="username" <?if (isset($_REQUEST['editar'])){ echo "value='".$reg['username']."'";}?>>
+      <input type="text" name="username" id="username" class="" required>
 
       <label>Correo electrónico</label>
-      <input type="text" name="correo" <?if (isset($_REQUEST['editar'])){ echo "value='".$reg['correo']."'";}?>>
+      <input type="email" name="correo" id="correo" required>
 
       <label>Contraseña</label>                                     
-      <input type="password" name="password" <?if (isset($_REQUEST['editar'])){ echo "value='".$reg['password']."'";}?>>
+      <input type="password" name="password" id="password" required onkeyup="ValidarPassword(this.value,1)"> 
 
       <label>Vuele a escribir la contraseña</label>
-      <input type="password" name="password">
+      <input type="password" name="password2" id="password2" required onkeyup="ValidarPassword(this.value,2)">
 
+        <p class="error displayNone" id="mensaje">Las contraseñas no coinciden</p>
+        
       <label>Selecciona tu imagen de perfil</label>
-      <input type="file" name="archivo" <?if (isset($_REQUEST['editar'])){ echo "value='".$reg['archivo']."'";}?>>
-
-      <?
-      if (isset($_REQUEST['editar'])){echo "<input type='hidden' name='id' value='".$reg['correo']."'>";}
-      ?>
-      <input type="submit" <? if(isset($_REQUEST['editar'])) { echo "value='Guardar'";} else {echo "value='Enviar'";}?> id="boton">
+      <input type="file" name="archivo" id="archivo" >
+        
+      
+      <input type="submit" value="Registrarse" id="boton" disabled class="disabled" name="registrar">
+      
 
      </form>
     </div>
    </article>
-   <table width="95%" border="2" align="center">
-			<tr>
-				<td>Nombre</td>
-				<td>Correo</td>
-				<td>Editar</td>
-				<td>Eliminar</td>
-			</tr>
-			<?
-			while($usuarios=mysqli_fetch_array($resultado)){
-			?>
-			<tr>
-				<td><? echo $usuarios['username']?></td>
-				<td><? echo $usuarios ['correo']?></td>
-				<td><a href="crearcuenta.php?editar=<? echo $usuarios['correo'];?>">Editar</a></td>
-				<td><a href="crearcuenta.php?eliminar=<? echo $usuarios['correo'];?>">Eliminar</a></td>
-			</tr>
-			<?};?>
-			<tr>
-				<td colspan="6" align="center">
-					Total de registros <?echo $nfilas;?>
-				</td>
-			</tr>
-		</table>
+   
+   
 		
   </main>
   
   <footer>
    <? include 'footer.php'?>
   </footer>
+  <script src="js/validar.js"></script>
  </body>
 
 </html>
