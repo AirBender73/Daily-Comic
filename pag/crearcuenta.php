@@ -1,13 +1,30 @@
 <?php
 
-
-include 'conexion.php';
+include ("conexion.php");
+session_start(); 
 
 if(isset($_REQUEST['registrar'])){
-    echo "<script> alert('si entre we');</script>";
+    //echo "<script> alert('si entre we');</script>";
+    
+    $correo=$_REQUEST['correo'];
+    $username=$_REQUEST['username'];
+    $password=$_REQUEST['password'];
+    
+    $insertar="insert into usuarios (correo, username, password) values ('$correo', '$username', '$password')";
+    
+    $insertado=mysqli_query($conexion, $insertar);
+    
+    if($insertado){
+        ?>
+        <script> alert('Registro exitoso');</script>
+        <?
+        header("Location:login.php");    
+    }else{
+        ?>
+        <script> alert('Hubo un error');</script>
+        <?
+    }
 }
-
-
 
 /*
 if(isset($_REQUEST['correo']) && !isset($_REQUEST['id']))
@@ -132,7 +149,6 @@ if (is_uploaded_file($_FILES['archivo']['tmp_name']))
         
       
       <input type="submit" value="Registrarse" id="boton" disabled class="disabled" name="registrar">
-      
 
      </form>
     </div>
