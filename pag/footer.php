@@ -1,31 +1,22 @@
-<?
-
-include 'conexion.php';
-if(isset($_REQUEST['nombre'])){
-    
-    $nombre=$_REQUEST['nombre'];
-    $comentario=$_REQUEST['comentario'];
-    
-    $insertar="insert into comentarios(nombre, comentario) values ('$nombre', '$comentario')";
-    mysqli_query($conexion, $insertar);}?>   
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="../estilos/crearcuenta.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
 </head>
 <body>
-    <footer>
+    
+</body>
+<footer>
         <div>
 		<section class="comentario">
-            <form method="post">
+            <form method="post" action="<?php echo $ruta;?>/home.php">
                 <h3>Dejanos tu Comentario</h3>
-                <label>Nombre</label>
-                <input type="text" name="nombre"></input>
+                <input type="text" name="nombre" placeholder="Nombre"></input>
                 <textarea name="comentario" placeholder="Escribe tu comentario..."></textarea>
-                <input type="submit" <? echo "value='Enviar'";?>></input>
+                <input name="Enviar" type="submit" <? echo "value='Enviar'";?>></input>
              </form>
         </section>
         <section class="sociales">
@@ -38,5 +29,4 @@ if(isset($_REQUEST['nombre'])){
         </section>
         </div>
     </footer>
-</body>
 </html>    

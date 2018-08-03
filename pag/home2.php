@@ -57,7 +57,7 @@ $catego=mysqli_fetch_assoc($resultado);
      </div>
      <div class="opciones">
       <ul>
-       <li><a href="Ver/ver_invazor.html"><span class="icon-eye"></span>Ver</a></li>
+       <li><a href="Ver/ver.php?id=<?php echo $catego['id_productos'];?>"><span class="icon-eye"></span>Ver</a></li>
        <li><a href="#"><span class="icon-download"></span>Descargar</a></li>
        <li><a href="#"><span class="icon-star-full"></span>Favoritos</a></li>
        <li><a href="#"><span class="icon-grin2"></span>Me gusta</a></li>

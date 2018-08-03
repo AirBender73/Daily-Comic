@@ -11,7 +11,7 @@ $not=mysqli_fetch_array($categoria);
 		</div>
 		<nav class="menu">
 			<ul>
-				<li><a href="home.php"><span class="icon-home"></span>Home</a></li>
+				<li><a href="<?php echo $ruta;?>/home.php"><span class="icon-home"></span>Home</a></li>
 				<li class="submenu1"><a href="#">Categorías<span class="icon-menu3"></span></a>
 					<ul>
 						<li><a href="home2.php?categoria=Aventura">Aventuras</a></li>
@@ -33,9 +33,10 @@ $not=mysqli_fetch_array($categoria);
 				<li class="submenu2"><a class="icon-search"></a>
 					<ul>
 						<li>
-							<a class="icon-radio-checked">
-								<input type="search" placeholder="Buscar">
-							</a>	
+							<form action="<?php echo $ruta;?>/buscar.php" method="post">
+								<input name="buscar" type="search" placeholder="Buscar...">
+								<button type="submit"><span class="icon-search"></span></button>
+							</form>	
 						</li>		
 					</ul>
 				</li>

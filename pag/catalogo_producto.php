@@ -1,6 +1,7 @@
 <?
 
 include 'conexion.php';
+$ruta=".";
 if(isset($_REQUEST['nombre']) && !isset($_REQUEST['id']))
 {
 

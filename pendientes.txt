@@ -1,8 +1,11 @@
-Buscador
-Registrar usuario  (Base de datos)
-Ver comic propiedades
+Buscador Listo kalisto;
+Registrar usuario  (Base de datos) Listo kalisto;
+Ver comic propiedades Listo kalisto;
 ver comic en realidad
-comentarios en comic
-comantarios en general
-like,favoritos
+comentarios en comic Listo kalisto;
+comantarios en general Listo kalisto;
+like,favoritos casiListo kalisto
 proceso de compra
+
+
+Revisar los estilos URGE!!

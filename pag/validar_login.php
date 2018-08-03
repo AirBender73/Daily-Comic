@@ -16,6 +16,7 @@
         {
             $bduser=$rusuarios['username'];
             $bdpass=$rusuarios['password'];
+            $id_usuario=$rusuarios['id'];
         }
         mysqli_close($conexion);
         
@@ -26,6 +27,7 @@
             if($password == $bdpass){
                 
                 $_SESSION['username'] = $username;
+                $_SESSION['id_usuario'] = $id_usuario;
                 //$_SESSION['password'] = $password;
                 
                 echo "<script>window.location='menu_admin.php?.session_id()'</script>";

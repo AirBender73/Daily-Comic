@@ -15,10 +15,8 @@ if(isset($_REQUEST['registrar'])){
     $insertado=mysqli_query($conexion, $insertar);
     
     if($insertado){
-        ?>
-        <script> alert('Registro exitoso');</script>
-        <?
-        header("Location:login.php");    
+        $_SESSION['username'] = $username;
+        header("location:home.php");    
     }else{
         ?>
         <script> alert('Hubo un error');</script>
